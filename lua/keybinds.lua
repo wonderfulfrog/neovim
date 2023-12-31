@@ -15,7 +15,8 @@ vim.keymap.set("n", "N", "Nzzzv", {})
 vim.keymap.set("x", "<Leader>p", "\"_dP", {})
 
 -- Yank into system clipboard
-vim.keymap.set("n", "<Leader>y", "\"+y", {})
+vim.keymap.set("n", "<Leader>y", "\"*y", {})
+vim.keymap.set("v", "<Leader>y", "\"*y", {})
 
 -- Like ciw on the text under the cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
