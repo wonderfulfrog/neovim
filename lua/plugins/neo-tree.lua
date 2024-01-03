@@ -14,9 +14,18 @@ return {
         nt.setup({
             filesystem = {
                 filtered_items = {
+                    show_hidden_count = false,
                     hide_dotfiles = false,
                     hide_gitignored = true,
-                }
+                    always_show = {
+                        ".env"
+                    },
+                    never_show = {
+                        ".git",
+                        "thumbs.db",
+                        ".DS_Store"
+                    }
+                },
             }
         })
     end
