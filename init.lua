@@ -25,6 +25,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.wrap = false
 vim.opt.cursorline = true
+vim.opt.cmdheight = 2
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
