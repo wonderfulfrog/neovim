@@ -13,7 +13,10 @@ return {
         end
     },
     {
-        "nvim-treesitter/nvim-treesitter-context"
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {
+            max_lines = 2,
+        }
     },
     {
         'windwp/nvim-autopairs',
