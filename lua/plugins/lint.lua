@@ -4,7 +4,7 @@ return {
         "BufReadPre",
         "BufNewFile",
     },
-    config = function ()
+    config = function()
         local lint = require("lint")
 
         lint.linters_by_ft = {
@@ -18,7 +18,7 @@ return {
 
         vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
             group = lint_augroup,
-            callback = function ()
+            callback = function()
                 lint.try_lint()
             end
         })

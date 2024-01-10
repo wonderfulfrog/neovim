@@ -15,14 +15,14 @@ return {
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-o>"] = cmp.mapping.complete(),
                     ["<C-e>"] = cmp.mapping.abort(),
-                    ["<Tab>"] = cmp.mapping(function (fallback)
+                    ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
                         else
                             fallback()
                         end
                     end, { "i" }),
-                    ["<S-Tab>"] = cmp.mapping(function (fallback)
+                    ["<S-Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_prev_item()
                         else
@@ -45,8 +45,8 @@ return {
                     { name = "nvim_lsp" },
                     { name = "luasnip" }
                 }, {
-                        { name = "buffer" }
-                    })
+                    { name = "buffer" }
+                })
             })
         end
     },

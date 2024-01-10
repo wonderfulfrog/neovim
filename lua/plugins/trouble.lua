@@ -4,4 +4,4 @@ return {
     config = function()
         vim.keymap.set("n", "<Leader>tt", ":TroubleToggle<CR>", { desc = "Toggle Trouble" })
     end
- }
+}
