@@ -1,22 +1,17 @@
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", {})
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", {})
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", {})
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", {})
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Go to split on left" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Go to split above"})
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Go to split below"})
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Go to split on right" })
 
--- Move visual blocks around using J/K (up/down)
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {})
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines under cursor up" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines under cursor down" })
 
--- Keep search terms in the middle of the screen
-vim.keymap.set("n", "n", "nzzzv", {})
-vim.keymap.set("n", "N", "Nzzzv", {})
+vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next search result and keep cursor centered on screen" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previous search result and keep cursor centered on screen" })
 
--- Paste without replacing clipboard contents
-vim.keymap.set("x", "<Leader>p", "\"_dP", {})
+vim.keymap.set("x", "<Leader>p", "\"_dP", { desc = "Paste without replacing clipboard contents" })
 
--- Yank into system clipboard
-vim.keymap.set("n", "<Leader>y", "\"*y", {})
-vim.keymap.set("v", "<Leader>y", "\"*y", {})
+vim.keymap.set("n", "<Leader>y", "\"*y", { desc = "Yank into system clipboard" })
+vim.keymap.set("v", "<Leader>y", "\"*y", { desc = "Yank into system clipboard" })
 
--- Like ciw on the text under the cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Like `ciw` for any highlighted text (doesn't have to be word)"})

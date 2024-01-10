@@ -6,12 +6,12 @@ return {
         config = function()
             local builtin = require('telescope.builtin')
 
-            vim.keymap.set('n', '<Leader>pp', builtin.git_files, {})
-            vim.keymap.set('n', '<Leader>pf', builtin.find_files, {})
-            vim.keymap.set('n', '<Leader>fh', builtin.help_tags, {})
+            vim.keymap.set('n', '<Leader>pp', builtin.git_files, { desc = "Search git_files" })
+            vim.keymap.set('n', '<Leader>pf', builtin.find_files, { desc = "Search all files "})
+            vim.keymap.set('n', '<Leader>fh', builtin.help_tags, { desc = "View help tags" })
             vim.keymap.set('n', '<Leader>ps', function()
                 builtin.grep_string({ search = vim.fn.input("Grep > ") })
-            end)
+            end, { desc = "Grep entire project for string" })
         end
     },
     {

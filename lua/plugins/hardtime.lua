@@ -9,6 +9,18 @@ return {
             ["<Down>"] = {"", "i"},
             ["<Left>"] = {"", "i"},
             ["<Right>"] = {"", "i"}
+        },
+        disabled_filetypes = {
+            "checkhealth",
+            "fugitive",
+            "help",
+            "lazy",
+            "mason",
+            "neo-tree",
+            "neo-tree-popup",
+            "netrw",
+            "noice",
+            "notify",
         }
     }
 }

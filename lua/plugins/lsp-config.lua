@@ -37,11 +37,11 @@ return {
                 end
             })
 
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-            vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, {})
-            vim.keymap.set('n', '<Leader>vca', vim.lsp.buf.code_action, {})
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
+            vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = "Go to implementation" })
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "Show signature" })
+            vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { desc = "Format buffer" })
+            vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { desc = "View code actions" })
         end
     }
 }
