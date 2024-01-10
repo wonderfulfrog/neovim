@@ -12,6 +12,7 @@ return {
         local nt = require("neo-tree")
 
         nt.setup({
+            enable_normal_mode_for_inputs = true,
             filesystem = {
                 filtered_items = {
                     show_hidden_count = false,
@@ -26,6 +27,16 @@ return {
                         ".DS_Store"
                     }
                 },
+            },
+            window = {
+                mappings = {
+                    ["m"] = {
+                        "move",
+                        config = {
+                            show_path = "relative"
+                        }
+                    },
+                }
             }
         })
     end
