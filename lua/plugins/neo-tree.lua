@@ -12,6 +12,7 @@ return {
         local nt = require("neo-tree")
 
         nt.setup({
+            open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
             enable_normal_mode_for_inputs = true,
             filesystem = {
                 filtered_items = {
