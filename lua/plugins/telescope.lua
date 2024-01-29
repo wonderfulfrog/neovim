@@ -13,6 +13,7 @@ return {
             vim.keymap.set('n', '<Leader>ps', function()
                 builtin.grep_string({ search = vim.fn.input("Grep > ") })
             end, { desc = "Grep entire project for string" })
+            vim.keymap.set('n', '<Leader>b', builtin.buffers, { desc = "Search buffers" })
         end
     },
     {
