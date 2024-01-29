@@ -29,3 +29,16 @@ vim.opt.cmdheight = 2
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+vim.opt.fillchars = {
+    foldopen = "",
+    foldclose = "",
+    -- fold = "⸱",
+    fold = " ",
+    foldsep = " ",
+    diff = "╱",
+    eob = " ",
+}
+
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "indent"
