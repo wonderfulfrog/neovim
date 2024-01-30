@@ -16,3 +16,5 @@ vim.keymap.set("v", "<Leader>y", "\"*y", { desc = "Yank into system clipboard" }
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Like `ciw` for any highlighted text (doesn't have to be word)" })
+
+vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
