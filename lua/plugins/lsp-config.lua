@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "tsserver" }
+                ensure_installed = { "lua_ls", "tsserver", "html" }
             })
         end
     },
@@ -24,7 +24,7 @@ return {
             })
 
             lspconfig.tsserver.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
             })
 
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
@@ -41,6 +41,7 @@ return {
 
             mason_tool_installer.setup({
                 ensure_installed = {
+                    "djlint",
                     "prettierd",
                     "eslint_d",
                 },
@@ -60,12 +61,11 @@ return {
                 yaml = { "prettierd" },
                 typescript = { "eslint_d" },
                 typescriptreact = { "eslint_d" },
-                html = { "prettierd" },
+                html = { "djlint" },
                 ejs = { "prettierd" },
                 css = { "prettierd" },
                 scss = { "prettierd" },
                 graphql = { "prettierd" },
-                markdown = { "prettierd" },
                 ["_"] = { "trim_whitespace" },
             },
             format_on_save = {
