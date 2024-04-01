@@ -7,6 +7,11 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		local djlint = lint.linters.djlint
+		djlint.args = {
+			"--reformat",
+		}
+
 		lint.linters_by_ft = {
 			html = { "djlint" },
 			javascript = { "eslint_d" },
