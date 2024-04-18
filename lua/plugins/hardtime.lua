@@ -22,6 +22,7 @@ return {
 			"netrw",
 			"noice",
 			"notify",
+			"qf",
 		},
 	},
 }
