@@ -16,11 +16,18 @@ return {
         },
     },
     {
+        "famiu/bufdelete.nvim",
+        keys = {
+            { "<leader>bd", "<cmd>Bdelete<cr>", desc = "Close Buffer" },
+        },
+    },
+    {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
         keys = {
-            { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-            { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+            { "<leader>bp", "<cmd>BufferLineTogglePin<cr>", desc = "Toggle Pin" },
+            { "[b",         "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
+            { "]b",         "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
         },
         opts = {
             options = {
