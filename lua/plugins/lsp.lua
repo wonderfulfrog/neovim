@@ -55,6 +55,7 @@ return {
             vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show signature" })
             vim.keymap.set("n", "<Leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
             vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, { desc = "View code actions" })
+            vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename" })
         end,
     },
 }
