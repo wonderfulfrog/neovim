@@ -18,6 +18,7 @@ return {
         opts = {
             ensure_installed = {
                 "djlint",
+                "eslint",
                 "eslint_d",
                 "prettierd",
                 "stylua",
