@@ -98,7 +98,9 @@ return {
             vim.keymap.set("n", "<Leader>fg", builtin.live_grep, { desc = "Grep git_files" })
             vim.keymap.set("n", "<Leader>fh", builtin.help_tags, { desc = "View help tags" })
             vim.keymap.set("n", "<Leader>fb", builtin.buffers, { desc = "Search buffers" })
+            vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "Resume" })
             vim.keymap.set("n", "<Leader>sR", builtin.resume, { desc = "Resume" })
+            vim.keymap.set("n", "<Leader>st", "<cmd>TodoTelescope<cr>", { desc = "Search TODOs" })
         end,
     },
     {
