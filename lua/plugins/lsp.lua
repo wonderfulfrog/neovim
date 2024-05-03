@@ -37,18 +37,16 @@ return {
         opts = {
             servers = {
                 tsserver = {},
-                lua_ls = {}
+                lua_ls = {},
             }
         },
         config = function(_, opts)
             local lspconfig = require("lspconfig")
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             local servers = opts.servers
 
             for server, server_opts in pairs(servers) do
-                local sopts = vim.tbl_deep_extend("force", server_opts, capabilities)
-                lspconfig[server].setup(sopts)
+                lspconfig[server].setup(server_opts)
             end
 
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })

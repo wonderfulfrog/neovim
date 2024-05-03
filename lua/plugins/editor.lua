@@ -1,6 +1,7 @@
 return {
     {
         "nvim-neo-tree/neo-tree.nvim",
+        event = "VeryLazy",
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
@@ -22,6 +23,7 @@ return {
                         hide_gitignored = true,
                         always_show = {
                             ".env",
+                            ".env.local",
                         },
                         never_show = {
                             ".git",

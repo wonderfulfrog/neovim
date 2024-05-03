@@ -1,7 +1,10 @@
 return {
     {
         "hrsh7th/nvim-cmp",
-        dependencies = { "hrsh7th/cmp-nvim-lsp" },
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+        },
         config = function()
             local cmp = require("cmp")
 
@@ -30,16 +33,13 @@ return {
                             fallback()
                         end
                     end, { "i" }),
-                    ["<CR>"] = cmp.mapping.confirm({
-                        behaviour = cmp.ConfirmBehavior.Insert,
-                        select = true,
-                    }),
+                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
                 }),
 
                 snippet = {
                     expand = function(args)
-                        require("luasnip").lsp_expand(args.body)
-                    end,
+                        require('luasnip').lsp_expand(args.body)
+                    end
                 },
 
                 sources = cmp.config.sources({
