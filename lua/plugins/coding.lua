@@ -58,7 +58,11 @@ return {
     {
         "echasnovski/mini.pairs",
         version = false,
-        opts = {},
+        opts = {
+            mappings = {
+                ["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\`].", register = { cr = false } },
+            },
+        },
     },
     {
         "echasnovski/mini.surround",

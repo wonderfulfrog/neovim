@@ -103,7 +103,10 @@ return {
     },
     {
         "rcarriga/nvim-notify",
-        opts = {}
+        opts = {
+            timeout = 2000,
+            stages = "static",
+        }
     },
     {
         "MunifTanjim/nui.nvim"
