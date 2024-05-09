@@ -9,6 +9,7 @@
   "dressing.nvim": { "branch": "master", "commit": "5162edb1442a729a885c45455a07e9a89058be2f" },
   "flash.nvim": { "branch": "main", "commit": "48817af25f51c0590653bbc290866e4890fe1cbe" },
   "friendly-snippets": { "branch": "main", "commit": "d5f74ce4dfdd82848f3f4eac65fe6e29ac5df4c2" },
+  "gitsigns.nvim": { "branch": "main", "commit": "805610a9393fa231f2c2b49cb521bfa413fadb3d" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
   "lazy.nvim": { "branch": "main", "commit": "3f13f080434ac942b150679223d54f5ca91e0d52" },
   "lazygit.nvim": { "branch": "main", "commit": "0ada6c6e7e138df92f5009b6952f4ac41248305a" },
