@@ -42,3 +42,5 @@ vim.opt.fillchars = {
 
 vim.opt.foldlevel = 99
 vim.opt.foldmethod = "indent"
+
+vim.opt.termguicolors = true
