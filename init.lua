@@ -33,4 +33,4 @@ require("lazy").setup("plugins")
 require("keybinds")
 require("autocmds")
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("catppuccin")

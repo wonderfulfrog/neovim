@@ -4,14 +4,15 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             options = {
-                icons_enabled = true,
-                theme = "tokyonight",
                 disabled_filetypes = {
                     statusline = {
                         "alpha",
-                        "neo-tree",
                     }
-                }
+                },
+            },
+            extensions = {
+                "lazy",
+                "neo-tree",
             }
         },
     },
@@ -24,18 +25,20 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
+        after = "catppuccin",
         keys = {
             { "<leader>bp", "<cmd>BufferLineTogglePin<cr>", desc = "Toggle Pin" },
             { "[b",         "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
             { "]b",         "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
         },
         opts = {
+            highlights = require("catppuccin.groups.integrations.bufferline").get(),
             options = {
                 diagnostics = "nvim_lsp",
                 offsets = {
                     {
                         filetype = "neo-tree",
-                        text = "Neo-tree",
+                        text = "",
                         highlight = "Directory",
                         text_align = "left",
                     },
