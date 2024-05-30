@@ -1,20 +1,15 @@
 return {
     {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        opts = {
-            options = {
-                disabled_filetypes = {
-                    statusline = {
-                        "alpha",
-                    }
-                },
-            },
-            extensions = {
-                "lazy",
-                "neo-tree",
-            }
-        },
+        'freddiehaddad/feline.nvim',
+        init = function()
+            local ctp_feline = require('catppuccin.groups.integrations.feline')
+
+            ctp_feline.setup()
+
+            require("feline").setup({
+                components = ctp_feline.get(),
+            })
+        end
     },
     {
         "famiu/bufdelete.nvim",
