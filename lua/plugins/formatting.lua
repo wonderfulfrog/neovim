@@ -5,7 +5,7 @@ return {
             css = { "prettierd" },
             scss = { "prettierd" },
             html = { "djlint" },
-            lua = { "stylelua" },
+            lua = { "stylua" },
             markdown = { "prettierd" },
             javascript = { "prettierd" },
             javascriptreact = { "prettierd" },
