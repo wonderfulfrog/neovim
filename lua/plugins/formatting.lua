@@ -6,6 +6,7 @@ return {
             scss = { "prettierd" },
             html = { "djlint" },
             lua = { "stylelua" },
+            markdown = { "prettierd" },
             javascript = { "prettierd" },
             javascriptreact = { "prettierd" },
             json = { "prettierd" },

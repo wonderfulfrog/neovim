@@ -22,6 +22,7 @@ return {
                 "eslint_d",
                 "prettierd",
                 "stylua",
+                "vale",
             },
             automatic_installation = true,
         }

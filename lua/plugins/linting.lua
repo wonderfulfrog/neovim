@@ -1,4 +1,4 @@
-return {
+return { {
     "mfussenegger/nvim-lint",
     opts = {
         events = { "BufWritePost", "BufReadPost", "InsertLeave" },
@@ -23,4 +23,16 @@ return {
             end,
         })
     end,
-}
+}, {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = { "BufWritePost", "BufReadPost", "InsertLeave" },
+    opts = function()
+        local null_ls = require("null-ls")
+        local diagnostics = null_ls.builtins.diagnostics
+        return {
+            sources = {
+                diagnostics.vale,
+            }
+        }
+    end
+} }
