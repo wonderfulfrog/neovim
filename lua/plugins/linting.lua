@@ -4,10 +4,10 @@ return {
         events = { "BufWritePost", "BufReadPost", "InsertLeave" },
         linters_by_ft = {
             html = { "djlint" },
-            javascript = { "eslint_d" },
-            typescript = { "eslint_d" },
-            javascriptreact = { "eslint_d" },
-            typescriptreact = { "eslint_d" },
+            javascript = { "eslint" },
+            typescript = { "eslint" },
+            javascriptreact = { "eslint" },
+            typescriptreact = { "eslint" },
         },
     },
     config = function(_, opts)
