@@ -20,7 +20,6 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
-        after = "catppuccin",
         keys = {
             { "<leader>bp", "<cmd>BufferLineTogglePin<cr>", desc = "Toggle Pin" },
             { "[b",         "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
