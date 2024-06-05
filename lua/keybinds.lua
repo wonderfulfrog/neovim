@@ -13,9 +13,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines under cursor d
 vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next search result and keep cursor centered on screen" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previous search result and keep cursor centered on screen" })
 
-vim.keymap.set("x", "<Leader>p", "\"_dP", { desc = "Paste without replacing clipboard contents" })
+vim.keymap.set("x", "<Leader>p", '"_dP', { desc = "Paste without replacing clipboard contents" })
 
-vim.keymap.set("n", "<Leader>y", "\"*y", { desc = "Yank into system clipboard" })
-vim.keymap.set("v", "<Leader>y", "\"*y", { desc = "Yank into system clipboard" })
+vim.keymap.set("n", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
+vim.keymap.set("v", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
 
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })

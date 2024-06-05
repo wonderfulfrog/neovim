@@ -31,13 +31,13 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    -- fold = "⸱",
-    fold = " ",
-    foldsep = " ",
-    diff = "╱",
-    eob = " ",
+	foldopen = "",
+	foldclose = "",
+	-- fold = "⸱",
+	fold = " ",
+	foldsep = " ",
+	diff = "╱",
+	eob = " ",
 }
 
 vim.opt.foldlevel = 99
