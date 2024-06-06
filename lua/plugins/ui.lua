@@ -1,15 +1,7 @@
 return {
 	{
 		"freddiehaddad/feline.nvim",
-		init = function()
-			local ctp_feline = require("catppuccin.groups.integrations.feline")
-
-			ctp_feline.setup()
-
-			require("feline").setup({
-				components = ctp_feline.get(),
-			})
-		end,
+		opts = {},
 	},
 	{
 		"famiu/bufdelete.nvim",
@@ -26,7 +18,6 @@ return {
 			{ "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
 		},
 		opts = {
-			highlights = require("catppuccin.groups.integrations.bufferline").get(),
 			options = {
 				diagnostics = "nvim_lsp",
 				offsets = {
