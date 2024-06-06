@@ -1,7 +1,15 @@
 return {
 	{
-		"freddiehaddad/feline.nvim",
-		opts = {},
+		"nvim-lualine/lualine.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			options = {
+				icons_enabled = true,
+				theme = "tokyonight",
+			},
+		},
 	},
 	{
 		"famiu/bufdelete.nvim",
