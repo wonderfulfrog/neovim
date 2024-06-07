@@ -37,6 +37,7 @@ return {
 		},
 		opts = {
 			servers = {
+				eslint = {},
 				tsserver = {},
 				lua_ls = {},
 			},
