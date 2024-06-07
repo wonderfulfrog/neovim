@@ -7,6 +7,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = {
+				"cssls",
 				"lua_ls",
 				"tsserver",
 				"html",
@@ -37,6 +38,7 @@ return {
 		},
 		opts = {
 			servers = {
+				cssls = {},
 				eslint = {},
 				tsserver = {},
 				lua_ls = {},
