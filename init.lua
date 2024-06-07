@@ -32,5 +32,6 @@ end
 require("lazy").setup("plugins")
 require("keybinds")
 require("autocmds")
+require("filetypes")
 
 vim.cmd.colorscheme("tokyonight")
