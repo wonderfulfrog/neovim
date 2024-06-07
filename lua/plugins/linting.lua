@@ -26,7 +26,7 @@ return {
 		end,
 	},
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = { "BufWritePost", "BufReadPost", "InsertLeave" },
 		opts = function()
 			local null_ls = require("null-ls")
