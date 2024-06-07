@@ -25,6 +25,7 @@ return {
 				"djlint",
 				"prettierd",
 				"stylua",
+				"vale", -- Vale CLI
 			},
 			auto_update = true,
 			automatic_installation = true,
@@ -46,6 +47,7 @@ return {
 				lua_ls = {},
 				taplo = {},
 				tsserver = {},
+				vale_ls = {},
 				yamlls = {},
 			},
 		},
