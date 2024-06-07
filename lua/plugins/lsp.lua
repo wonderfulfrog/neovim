@@ -8,9 +8,11 @@ return {
 		opts = {
 			ensure_installed = {
 				"cssls",
+				"eslint",
 				"lua_ls",
 				"tsserver",
 				"html",
+				"vale_ls",
 			},
 		},
 	},
@@ -19,12 +21,10 @@ return {
 		opts = {
 			ensure_installed = {
 				"djlint",
-				"eslint",
-				"eslint_d",
 				"prettierd",
 				"stylua",
-				"vale",
 			},
+			auto_update = true,
 			automatic_installation = true,
 		},
 	},
