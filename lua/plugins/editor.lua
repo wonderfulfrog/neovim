@@ -8,51 +8,29 @@ return {
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
-		config = function()
-			vim.keymap.set("n", "<Leader>ee", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })
-			vim.keymap.set("n", "<Leader>er", ":Neotree reveal<CR>", { desc = "Reveal file" })
-
-			local nt = require("neo-tree")
-
-			nt.setup({
-				open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
-				filesystem = {
-					filtered_items = {
-						show_hidden_count = false,
-						hide_dotfiles = false,
-						hide_gitignored = true,
-						always_show = {
-							".env",
-							".env.local",
-						},
-						never_show = {
-							".git",
-							"thumbs.db",
-							".DS_Store",
-						},
+		keys = {
+			{ "<Leader>ee", "<cmd>Neotree toggle<CR>", desc = "Toggle Neotree" },
+			{ "<Leader>er", "<cmd>Neotree reveal<CR>", desc = "Reveal file" },
+		},
+		opts = {
+			open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
+			filesystem = {
+				filtered_items = {
+					show_hidden_count = false,
+					hide_dotfiles = false,
+					hide_gitignored = true,
+					always_show = {
+						".env",
+						".env.local",
+					},
+					never_show = {
+						".git",
+						"thumbs.db",
+						".DS_Store",
 					},
 				},
-				window = {
-					mappings = {
-						["m"] = {
-							"move",
-							config = {
-								show_path = "relative",
-							},
-						},
-					},
-				},
-				event_handlers = {
-					{
-						event = "neo_tree_popup_input_ready",
-						handler = function()
-							-- Switch to normal inside popups by default.
-							vim.cmd.stopinsert()
-						end,
-					},
-				},
-			})
-		end,
+			},
+		},
 	},
 	{
 		"folke/which-key.nvim",
