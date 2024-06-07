@@ -1,7 +1,7 @@
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Go to split on left" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Go to split above" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Go to split below" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Go to split on right" })
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>", { desc = "Go to split on left" })
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>", { desc = "Go to split above" })
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>", { desc = "Go to split below" })
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>", { desc = "Go to split on right" })
 
 vim.keymap.set("n", "<leader>|", "<C-w>v", { desc = "Split window right" })
 vim.keymap.set("n", "<leader>-", "<C-w>s", { desc = "Split window below" })
@@ -19,3 +19,10 @@ vim.keymap.set("n", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
 vim.keymap.set("v", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
 
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Exit insert mode (Terminal)" })
+vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit insert mode (Terminal)" })
+vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<CR>", { desc = "Go to split on left (Terminal)" })
+vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<CR>", { desc = "Go to split above (Terminal)" })
+vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<CR>", { desc = "Go to split below (Terminal)" })
+vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<CR>", { desc = "Go to split on right (Terminal)" })

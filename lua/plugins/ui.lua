@@ -159,4 +159,15 @@ return {
 			alpha.setup(dashboard.opts)
 		end,
 	},
+	{
+		"akinsho/toggleterm.nvim",
+		opts = {},
+		keys = {
+			{
+				"<leader>T",
+				"<cmd>ToggleTerm direction=float<CR>",
+				desc = "Open floating terminal",
+			},
+		},
+	},
 }
