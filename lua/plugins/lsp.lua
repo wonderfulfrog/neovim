@@ -13,7 +13,6 @@ return {
 				"lua_ls",
 				"taplo", -- .toml
 				"tsserver",
-				"vale_ls",
 				"yamlls", -- .yml
 			},
 		},
@@ -24,8 +23,8 @@ return {
 			ensure_installed = {
 				"djlint",
 				"prettierd",
+				"proselint",
 				"stylua",
-				"vale", -- Vale CLI
 			},
 			auto_update = true,
 			automatic_installation = true,
@@ -47,7 +46,6 @@ return {
 				lua_ls = {},
 				taplo = {},
 				tsserver = {},
-				vale_ls = {},
 				yamlls = {},
 			},
 		},
