@@ -33,9 +33,10 @@ return {
 		},
 	},
 	{
-		-- TODO: Figure out why this plugin is not working.
 		"windwp/nvim-autopairs",
-		event = "VeryLazy",
-		opts = {},
+		event = "InsertEnter",
+		opts = {
+			disable_filetype = { "TelescopePrompt" },
+		},
 	},
 }
