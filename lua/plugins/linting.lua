@@ -5,6 +5,7 @@ return {
 			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 			linters_by_ft = {
 				html = { "djlint" },
+				markdown = { "vale" },
 				javascript = { "eslint" },
 				typescript = { "eslint" },
 				javascriptreact = { "eslint" },
@@ -23,19 +24,6 @@ return {
 					lint.try_lint()
 				end,
 			})
-		end,
-	},
-	{
-		"nvimtools/none-ls.nvim",
-		event = { "BufWritePost", "BufReadPost", "InsertLeave" },
-		opts = function()
-			local null_ls = require("null-ls")
-			local diagnostics = null_ls.builtins.diagnostics
-			return {
-				sources = {
-					diagnostics.vale,
-				},
-			}
 		end,
 	},
 }
