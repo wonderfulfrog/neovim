@@ -77,17 +77,43 @@ return {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			local builtin = require("telescope.builtin")
-
-			vim.keymap.set("n", "<Leader>ff", builtin.git_files, { desc = "Search git_files" })
-			vim.keymap.set("n", "<Leader>fg", builtin.live_grep, { desc = "Grep git_files" })
-			vim.keymap.set("n", "<Leader>fh", builtin.help_tags, { desc = "View help tags" })
-			vim.keymap.set("n", "<Leader>fb", builtin.buffers, { desc = "Search buffers" })
-			vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "View keymaps" })
-			vim.keymap.set("n", "<Leader>sR", builtin.resume, { desc = "Resume" })
-			vim.keymap.set("n", "<Leader>st", "<cmd>TodoTelescope<cr>", { desc = "Search TODOs" })
-		end,
+		keys = {
+			{
+				"<Leader>ff",
+				"<cmd>lua require'telescope.builtin'.git_files{}<CR>",
+				desc = "Search git_files",
+			},
+			{
+				"<Leader>fg",
+				"<cmd>lua require'telescope.builtin'.live_grep{}<CR>",
+				desc = "Grep git_files",
+			},
+			{
+				"<Leader>fh",
+				"<cmd>lua require'telescope.builtin'.help_tags{}<CR>",
+				desc = "View help tags",
+			},
+			{
+				"<Leader>fb",
+				"<cmd>lua require'telescope.builtin'.buffers{}<CR>",
+				desc = "Search buffers",
+			},
+			{
+				"<Leader>sk",
+				"<cmd>lua require'telescope.builtin'.keymaps{}<CR>",
+				desc = "View keymaps",
+			},
+			{
+				"<Leader>sR",
+				"<cmd>lua require'telescope.builtin'.resume{}<CR>",
+				desc = "Resume",
+			},
+			{
+				"<Leader>st",
+				"<cmd>TodoTelescope<CR>",
+				desc = "Search TODOs",
+			},
+		},
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
