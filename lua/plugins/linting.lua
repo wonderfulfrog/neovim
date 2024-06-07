@@ -5,7 +5,6 @@ return {
 			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 			linters_by_ft = {
 				html = { "djlint" },
-				markdown = { "vale" },
 				javascript = { "eslint" },
 				typescript = { "eslint" },
 				javascriptreact = { "eslint" },
