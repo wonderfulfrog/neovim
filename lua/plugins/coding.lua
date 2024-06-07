@@ -1,4 +1,5 @@
 return {
+	{ "saadparwaiz1/cmp_luasnip" },
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -13,7 +14,6 @@ return {
 				completion = {
 					completeopt = "menu,menuone,noinsert",
 				},
-
 				mapping = cmp.mapping.preset.insert({
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -44,6 +44,7 @@ return {
 
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" },
 				}, {
 					{ name = "buffer" },
@@ -53,7 +54,19 @@ return {
 	},
 	{
 		"L3MON4D3/LuaSnip",
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = {
+			{
+				"rafamadriz/friendly-snippets",
+				config = function()
+					require("luasnip.loaders.from_vscode").lazy_load()
+				end,
+			},
+		},
+		build = "make install_jsregexp",
+		opts = {
+			history = true,
+			delete_check_events = "TextChanged",
+		},
 	},
 	{
 		"echasnovski/mini.pairs",
