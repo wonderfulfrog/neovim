@@ -39,4 +39,16 @@ return {
 			disable_filetype = { "TelescopePrompt" },
 		},
 	},
+	{
+		"windwp/nvim-ts-autotag",
+		event = "VeryLazy",
+		ft = {
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"html",
+		},
+		opts = {},
+	},
 }
