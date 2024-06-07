@@ -66,9 +66,15 @@ return {
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			vim.keymap.set("n", "<Leader>tt", ":TroubleToggle<CR>", { desc = "Toggle Trouble" })
-		end,
+		opts = {},
+		cmd = "Trouble",
+		keys = {
+			{
+				"<Leader>tt",
+				"<cmd>Trouble diagnostics toggle<CR>",
+				desc = "Toggle Trouble",
+			},
+		},
 	},
 	{
 		"folke/todo-comments.nvim",
