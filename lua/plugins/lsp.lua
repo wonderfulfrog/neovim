@@ -9,10 +9,12 @@ return {
 			ensure_installed = {
 				"cssls",
 				"eslint",
-				"lua_ls",
-				"tsserver",
 				"html",
+				"lua_ls",
+				"taplo", -- .toml
+				"tsserver",
 				"vale_ls",
+				"yamlls", -- .yml
 			},
 		},
 	},
@@ -40,8 +42,11 @@ return {
 			servers = {
 				cssls = {},
 				eslint = {},
-				tsserver = {},
+				html = {},
 				lua_ls = {},
+				taplo = {},
+				tsserver = {},
+				yamlls = {},
 			},
 		},
 		config = function(_, opts)
