@@ -33,13 +33,6 @@ return {
 		},
 	},
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {
-			disable_filetype = { "TelescopePrompt" },
-		},
-	},
-	{
 		"windwp/nvim-ts-autotag",
 		event = "VeryLazy",
 		ft = {
