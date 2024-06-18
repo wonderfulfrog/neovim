@@ -27,34 +27,6 @@ return {
 		},
 	},
 	{
-		"famiu/bufdelete.nvim",
-		keys = {
-			{ "<leader>bd", "<cmd>Bdelete<cr>", desc = "Close Buffer" },
-		},
-	},
-	{
-		"akinsho/bufferline.nvim",
-		event = "VeryLazy",
-		keys = {
-			{ "<leader>bp", "<cmd>BufferLineTogglePin<cr>", desc = "Toggle Pin" },
-			{ "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-			{ "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-		},
-		opts = {
-			options = {
-				diagnostics = "nvim_lsp",
-				offsets = {
-					{
-						filetype = "neo-tree",
-						text = "",
-						highlight = "Directory",
-						text_align = "left",
-					},
-				},
-			},
-		},
-	},
-	{
 		"lukas-reineke/indent-blankline.nvim",
 		opts = {
 			indent = {
