@@ -174,4 +174,20 @@ return {
 			},
 		},
 	},
+	{
+		"m-demare/attempt.nvim",
+		opts = {
+			ext_options = { "js", "lua" },
+		},
+		keys = function()
+			local attempt = require("attempt")
+
+			return {
+				{ "<Leader>an", attempt.new_select, desc = "New attempt" },
+				{ "<Leader>ar", attempt.run, desc = "Run attempt" },
+				{ "<Leader>ad", attempt.delete_buf, desc = "Delete attempt buffer" },
+				{ "<Leader>al", "<cmd>Telescope attempt<CR>", desc = "Search attempts" },
+			}
+		end,
+	},
 }
