@@ -41,7 +41,14 @@ return {
 		opts = {
 			servers = {
 				cssls = {},
-				eslint = {},
+				eslint = {
+					on_attach = function(_, bufnr)
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = bufnr,
+							command = "EslintFixAll",
+						})
+					end,
+				},
 				html = {},
 				lua_ls = {},
 				taplo = {},
