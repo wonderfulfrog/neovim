@@ -18,10 +18,6 @@ vim.keymap.set("x", "<Leader>p", '"_dP', { desc = "Paste without replacing clipb
 vim.keymap.set("n", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
 vim.keymap.set("v", "<Leader>y", '"*y', { desc = "Yank into system clipboard" })
 
-vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
-
-vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Exit insert mode (Terminal)" })
-vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit insert mode (Terminal)" })
 vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<CR>", { desc = "Go to split on left (Terminal)" })
 vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<CR>", { desc = "Go to split above (Terminal)" })
 vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<CR>", { desc = "Go to split below (Terminal)" })
