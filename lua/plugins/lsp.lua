@@ -12,7 +12,7 @@ return {
 				"html",
 				"lua_ls",
 				"taplo", -- .toml
-				"tsserver",
+				"ts_ls",
 				"yamlls", -- .yml
 			},
 		},
