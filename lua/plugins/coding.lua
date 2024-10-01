@@ -16,7 +16,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			lang = {
-				pug = "// %s",
+				pug = "//- %s",
 			},
 		},
 	},
