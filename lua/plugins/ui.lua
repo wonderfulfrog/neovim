@@ -1,6 +1,7 @@
 return {
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
@@ -36,17 +37,20 @@ return {
 			scope = { enabled = false },
 			exclude = {
 				filetypes = {
-					"help",
+					"Trouble",
 					"alpha",
 					"dashboard",
-					"neo-tree",
-					"Trouble",
-					"trouble",
+					"help",
 					"lazy",
 					"mason",
+					"neo-tree",
 					"notify",
+					"snacks_dashboard",
+					"snacks_notif",
+					"snacks_terminal",
+					"snacks_win",
 					"toggleterm",
-					"lazyterm",
+					"trouble",
 				},
 			},
 		},
@@ -61,84 +65,25 @@ return {
 		init = function()
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = {
-					"help",
+					"Trouble",
 					"alpha",
 					"dashboard",
-					"neo-tree",
-					"Trouble",
-					"trouble",
+					"help",
 					"lazy",
 					"mason",
+					"neo-tree",
 					"notify",
+					"snacks_dashboard",
+					"snacks_notif",
+					"snacks_terminal",
+					"snacks_win",
 					"toggleterm",
-					"lazyterm",
+					"trouble",
 				},
-				callback = function()
-					vim.b.miniindentscope_disable = true
+				callback = function(data)
+					vim.b[data.buf].miniindentscope_disable = true
 				end,
 			})
-		end,
-	},
-	{
-		"rcarriga/nvim-notify",
-		opts = {
-			timeout = 2000,
-			stages = "static",
-		},
-	},
-	{
-		"MunifTanjim/nui.nvim",
-	},
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	},
-	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			local alpha = require("alpha")
-			local dashboard = require("alpha.themes.dashboard")
-
-			-- https://github.com/MaximilianLloyd/ascii.nvim
-			dashboard.section.header.val = {
-				"                                                                           ",
-				"                   ░░░  ▄▄▄▄▄▄███▄▄▄▄▄                                     ",
-				"                    ▄███████▀▀▀▀▀▀█▓▓▓▓▓▓██▄▄▄▄                            ",
-				"                   ▐████▄▄    ■▓▓▓▓▀▀▀▀▀▀▀▀▀█████■                ██▄      ",
-				"                    ▀█████████▄▄▄▄▄███████████▀▀             ▄▄  ████░▄▄▄  ",
-				"    ▐██▄            ▄▄▄▄▄▄▀▀▀▀▀▀▀▀▓▓▓▀░░░▄▄▄   ▄▄          ▐███▏▐██▓▄████  ",
-				" ▄█▓░███▓ ▄▓▓▓▄▄████████████▄█████▄ ▄█████████▐███         ████▏██▀████▀   ",
-				" ▐███▄███░▀████████▀▀   ▀▓█████▓▀██▓████▀▀  ███████      ▄█████ ■ ██▀      ",
-				"  ▀████▓██ ▐██████       ▐████   ▐████▀    ▒████████▄  ▄███████            ",
-				"    ▀███    ▀▀█████▄    ▄████   ▄████▏    ▄█████▀█████████▀ ███            ",
-				"               ▀████▄ ▄████▐██▄███████▄▄▄███▓██▏ ▀██████▀   ▐██            ",
-				"                ▀████████▀  ▀████▀▀████████▀▐██▏  ▀██▀▀     ▐██▏           ",
-				"          ▓▓█    ▀████ ▀            ■███▄▄  ███              ██▏           ",
-				"          ▀▀▀      ▀▀                ▀█████▄▓▀               ██▏           ",
-				"            ░░     ▄████████████▄▄▄▄▄▄▄ ▀▀▀████▄▄   ▒▒▒      ██▏  ▄▄       ",
-				"                   ▀▀████▀▀▀▀▀▀████████████▄▄▓▓▓███▄    ░░░░ ▐█▏ ■▀▀       ",
-				"                                      ▀▀▀▀▀▀█████▓▓▓▓█▄▄     ▐█            ",
-				"                                                ▄█████████▄▄               ",
-				"                                       ▄▄▄▄████████▀▀▀▀▀▀▀███▏             ",
-				"                                   ▄▄█████▀▀▀▀              ▀■             ",
-				"                                ▄███▀▀▀▀                                   ",
-				"                              ■▀▀                                          ",
-				"                                                                           ",
-			}
-
-			dashboard.section.buttons.val = {
-				dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
-				dashboard.button("SPC ee", "  > File explorer", "<cmd>Neotree<CR>"),
-				dashboard.button("q", "  > Quit", "<cmd>qa<CR>"),
-			}
-
-			alpha.setup(dashboard.opts)
 		end,
 	},
 }

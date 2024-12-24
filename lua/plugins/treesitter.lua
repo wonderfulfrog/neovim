@@ -3,8 +3,11 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		version = false,
 		build = ":TSUpdate",
+		event = { "VeryLazy" },
+    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
 		opts = {
 			ensure_installed = {
+        "graphql",
 				"html",
 				"htmldjango",
 				"javascript",
@@ -14,8 +17,10 @@ return {
 				"lua",
 				"markdown",
 				"markdown_inline",
+				"php",
 				"pug",
 				"tsx",
+				"twig",
 				"typescript",
 				"vim",
 				"vimdoc",

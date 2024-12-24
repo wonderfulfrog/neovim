@@ -11,23 +11,12 @@ return {
 				"eslint",
 				"html",
 				"lua_ls",
+				"psalm", -- .php
 				"taplo", -- .toml
 				"ts_ls",
+				"twiggy_language_server", -- .twig
 				"yamlls", -- .yml
 			},
-		},
-	},
-	{
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		opts = {
-			ensure_installed = {
-				"djlint",
-				"prettierd",
-				"proselint",
-				"stylua",
-			},
-			auto_update = true,
-			automatic_installation = true,
 		},
 	},
 	-- lspconfig should be the last step.
@@ -49,10 +38,12 @@ return {
 						})
 					end,
 				},
-				html = {},
 				lua_ls = {},
+				html = {},
+				psalm = {},
 				taplo = {},
-				tsserver = {},
+				ts_ls = {},
+				twiggy_language_server = {},
 				yamlls = {},
 			},
 		},
