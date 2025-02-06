@@ -11,7 +11,7 @@ return {
 				"eslint",
 				"html",
 				"lua_ls",
-				"psalm", -- .php
+				"phpactor", -- php
 				"taplo", -- .toml
 				"ts_ls",
 				"twiggy_language_server", -- .twig
@@ -38,9 +38,9 @@ return {
 						})
 					end,
 				},
-				lua_ls = {},
 				html = {},
-				psalm = {},
+				lua_ls = {},
+				phpactor = {},
 				taplo = {},
 				ts_ls = {},
 				twiggy_language_server = {},

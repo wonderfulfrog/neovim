@@ -4,10 +4,10 @@ return {
 		version = false,
 		build = ":TSUpdate",
 		event = { "VeryLazy" },
-    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
+		lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
 		opts = {
 			ensure_installed = {
-        "graphql",
+				"graphql",
 				"html",
 				"htmldjango",
 				"javascript",
@@ -18,6 +18,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"php",
+				"php_only",
 				"pug",
 				"tsx",
 				"twig",

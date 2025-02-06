@@ -3,6 +3,7 @@ return {
 		"stevearc/conform.nvim",
 		opts = {
 			formatters_by_ft = {
+				blade = { "blade-formatter" },
 				css = { "prettierd" },
 				scss = { "prettierd" },
 				html = { "djlint" },
@@ -12,7 +13,7 @@ return {
 				javascriptreact = { "prettierd" },
 				json = { "prettierd" },
 				jsonc = { "prettierd" },
-				php = { "php_cs_fixer" },
+				php = { "pint", "php_cs_fixer", stop_after_first = true },
 				toml = { "taplo" },
 				typescript = { "prettierd" },
 				typescriptreact = { "prettierd" },
@@ -52,7 +53,9 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
 			ensure_installed = {
+				"blade-formatter",
 				"djlint",
+				"phpcs",
 				"php-cs-fixer",
 				"prettierd",
 				"proselint",
