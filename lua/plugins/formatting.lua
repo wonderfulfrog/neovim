@@ -13,7 +13,7 @@ return {
 				javascriptreact = { "prettierd" },
 				json = { "prettierd" },
 				jsonc = { "prettierd" },
-				php = { "pint", "php_cs_fixer", stop_after_first = true },
+				php = { "php_cs_fixer", stop_after_first = true },
 				toml = { "taplo" },
 				typescript = { "prettierd" },
 				typescriptreact = { "prettierd" },
@@ -36,6 +36,9 @@ return {
 					end,
 				},
 				php_cs_fixer = {
+					env = {
+						PHP_CS_FIXER_IGNORE_ENV = "1",
+					},
 					args = function()
 						local CONFIG_PATH = os.getenv("HOME") .. "/.config/php-cs-fixer/php-cs-fixer.php"
 						return {
@@ -46,6 +49,16 @@ return {
 						}
 					end,
 				},
+				-- pint = {
+				-- 	args = function()
+				-- 		local CONFIG_PATH = os.getenv("HOME") .. "/.config/pint/pint.json"
+				-- 		return {
+				-- 			"--config",
+				-- 			CONFIG_PATH,
+				-- 			"$FILENAME",
+				-- 		}
+				-- 	end,
+				-- },
 			},
 		},
 	},
