@@ -1,11 +1,17 @@
 return {
+	-- Locking mason.nvim and mason-lspconfig.nvim to v1
+	-- See -- see https://github.com/LazyVim/LazyVim/issues/6039
 	{
 		"williamboman/mason.nvim",
+		version = "^1.0.0",
 		opts = {},
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		version = "^1.0.0",
+		dependencies = { "neovim/nvim-lspconfig" },
 		opts = {
+			automatic_enable = false,
 			ensure_installed = {
 				"cssls",
 				"eslint",
@@ -23,10 +29,6 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = "VeryLazy",
-		dependencies = {
-			"mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-		},
 		opts = {
 			servers = {
 				cssls = {},
